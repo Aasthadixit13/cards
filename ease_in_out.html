@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ease-in-out</title>
+<style> 
+div {
+  width: 100px;
+  height: 50px;
+  background: yellowgreen;
+  color: palevioletred;
+  font-weight: bold;
+  position: relative;
+  animation: aastha 5s infinite;
+}
+h1{
+    text-align: center;
+}
+#div1 {animation-timing-function: linear;}
+#div2 {animation-timing-function: ease;}
+#div3 {animation-timing-function: ease-in;}
+#div4 {animation-timing-function: ease-out;}
+#div5 {animation-timing-function: ease-in-out;}
+
+@keyframes aastha {
+  from {left: 100px;}
+  to {left: 600px;}
+}
+</style>
+</head>
+<body>
+
+<h1>animation for a different way</h1>
+
+<div id="div1">linear</div>
+<div id="div2">ease</div>
+<div id="div3">ease-in</div>
+<div id="div4">ease-out</div>
+<div id="div5">ease-in-out</div>
+
+</body>
+</html>

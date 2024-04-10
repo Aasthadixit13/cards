@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile card</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins';
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        /* background: black; */
+    }
+    .card{
+        position: relative;
+        width: 350px;
+        height: 190px;
+        background: black;
+        transition: 0.5s;
+    }
+    .card:hover{
+        height: 450px;
+
+    }
+    .lines{
+        position: absolute;
+        inset: 0px;
+        background: black;
+        overflow: hidden;
+
+    }
+    .lines::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 600px;
+        height: 120px;
+        background: linear-gradient(transparent,#45f3ff,#45f3ff,#45f3ff,transparent);
+        animation: animate 4s linear infinite;
+    }
+    @keyframes animate {
+        0%{
+            transform: translate(-50%,-50%) rotate(0deg);
+        }
+        100%{
+            transform: translate(-50%,-50%) rotate(360deg);
+        }
+        
+    }
+    .lines::after{
+        content: "";
+        position: absolute;
+        background: black;
+        inset: 3px;
+
+    }
+    .imgbox{
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translate(-50%);
+        width: 150px;
+        height: 150px;
+        background: gray;
+        transition: 0.5s;
+        overflow: hidden;
+        z-index: 10;
+    }
+.card:hover .imgbox{
+    width: 250px;
+    height: 150px;
+}
+.card .imgbox::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 150px;
+    width: 500px;
+    transform: translate(-50%,-50%);
+    background: linear-gradient(transparent,#ff3c7b,#ff3c7b,#ff3c7b,transparent);
+    animation: animate2 6s linear infinite;
+
+}
+@keyframes animate2 {
+        0%{
+            transform: translate(-50%,-50%) rotate(-360deg);
+        }
+        100%{
+            transform: translate(-50%,-50%) rotate(0deg);
+        }
+        
+    }
+.card .imgbox::after{
+    content: "";
+    position: absolute;
+    inset: 3px;
+    background: black;
+}
+/* img{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: calc(100px,20px);
+    height: calc(100px,20px);
+} */
+</style>
+<body>
+    <div class="card">
+        <div class="lines"></div>
+        <div class="imgbox">
+            <!-- <img src="img_main.jpg" alt=""> -->
+        <!-- </div>
+        <div class="content">
+            <div class="details">
+                <h2>AASTHA DIXIT<br><span>coder</span></h2>
+                <div class="data">
+                    <h3>31<br><span>posts</span></h3>
+                    <h3>171<br><span>followers</span></h3>
+                    <h3>200<br><span>following</span></h3>
+                </div>
+
+            </div>
+        </div> -->
+    </div>
+</body>
+</html>
